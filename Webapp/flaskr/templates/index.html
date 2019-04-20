@@ -1,0 +1,85 @@
+<html>
+<body>
+    <h3>Titanic Survival Prediction</h3>
+
+<div>
+  <form action="/result" method="POST">
+    <label for="id">Age of the Passenger</label>
+    <input type="text" id="id" name="Age">
+    <br>
+    <br>
+    <label for="id">Fare paid by passenger</label>
+    <input type="text" id="id" name="Fare">
+    <br>
+    <br>
+    <label for="Name">Name of passenger (start with Mr., Mrs. or Miss.)</label>
+    <input type="text" id="name" name="Name">
+    <br>
+    <br>
+    <label for="Pclass">Boarded class (1,2 or 3)</label>
+    <select id="Pclass" name="Pclass">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <br>
+    <br>
+    <label for="SibSp">No of siblings of passenger</label>
+    <select id="SibSp" name="SibSp">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+     </select>
+    <br>
+    <br>
+    <label for="Parch">Members in family</label>
+    <select id="Parch" name="Parch">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+     </select>
+    <br>
+    <br>
+    <label for="Embarked">Embarked station</label>
+    <select id="Ticket" name="Embarked">
+      <option value="Q">Q</option>
+      <option value="S">S</option>
+      <option value="C">C</option>
+     </select>
+    <br>
+    <br>
+    <label for="Cabin">Cabin</label>
+    <select id="Cabin" name="Cabin">
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+      <option value="E">E</option>
+     </select>
+    <br>
+    <br>
+    <label for="Sex">Sex</label>
+    <select id="sex" name="Sex">
+      <option value="male">male</option>
+      <option value="female">female</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
