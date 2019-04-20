@@ -1,85 +1,139 @@
 <html>
-<body>
-    <h3>Titanic Survival Prediction</h3>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Titanic Survival Prediction</title>
+<link rel="stylesheet" href={{ url_for('static', filename='css/demo.css') }} />
+<script type="text/javascript" src="static/script.js"></script>
+</head>
 
-<div>
-  <form action="/result" method="POST">
-    <label for="id">Age of the Passenger</label>
-    <input type="text" id="id" name="Age">
-    <br>
-    <br>
-    <label for="id">Fare paid by passenger</label>
-    <input type="text" id="id" name="Fare">
-    <br>
-    <br>
-    <label for="Name">Name of passenger (start with Mr., Mrs. or Miss.)</label>
-    <input type="text" id="name" name="Name">
-    <br>
-    <br>
-    <label for="Pclass">Boarded class (1,2 or 3)</label>
-    <select id="Pclass" name="Pclass">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
+<body>
+<div id="div-regForm">
+<div class="form-title">Titanic Survival Prediction</div>
+<div class="form-sub-title">Fill the following passenger details:</div>
+<form action="/result" method="POST">
+
+<table>
+  <tbody>
+  <tr>
+    <td><label for="fname">Age:</label></td>
+    <td><div class="input-container"><input name="Age" id="fname" type="text" /></div></td>
+  </tr>
+  <tr>
+    <td><label for="lname">Fare:</label></td>
+    <td><div class="input-container"><input name="Fare" id="lname" type="text" /></div></td>
+  </tr>
+  <tr>
+    <td><label for="email">Name (Mr.,Mrs.,Miss.):</label></td>
+    <td><div class="input-container"><input name="Name" id="email" type="text" /></div></td>
+  </tr>
+  <tr>
+    <td><label for="sex-select">Sex:</label></td>
+    <td>
+    <div class="input-container">
+    <select name="Sex" id="sex-select">
+    <option value="female">Female</option>
+    <option value="male">Male</option>
     </select>
-    <br>
-    <br>
-    <label for="SibSp">No of siblings of passenger</label>
-    <select id="SibSp" name="SibSp">
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-     </select>
-    <br>
-    <br>
-    <label for="Parch">Members in family</label>
-    <select id="Parch" name="Parch">
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-     </select>
-    <br>
-    <br>
-    <label for="Embarked">Embarked station</label>
-    <select id="Ticket" name="Embarked">
-      <option value="Q">Q</option>
-      <option value="S">S</option>
-      <option value="C">C</option>
-     </select>
-    <br>
-    <br>
-    <label for="Cabin">Cabin</label>
-    <select id="Cabin" name="Cabin">
-      <option value="A">A</option>
-      <option value="B">B</option>
-      <option value="C">C</option>
-      <option value="D">D</option>
-      <option value="E">E</option>
-     </select>
-    <br>
-    <br>
-    <label for="Sex">Sex</label>
-    <select id="sex" name="Sex">
-      <option value="male">male</option>
-      <option value="female">female</option>
-    </select>
-    <br>
-    <br>
-    <input type="submit" value="Submit">
-  </form>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td><label>Class (1,2 or 3):</label></td>
+    <td>
+    <div class="input-container">
+    <select name="Pclass">
+		<option value="1">1</option>
+		
+		<option value="2">2</option>
+		
+		<option value="3">3</option>
+		</select>
+    </div>
+    </td>
+  </tr>
+
+  <tr>
+		<td><label>No of siblings:</label></td>
+		<td>
+		<div class="input-container">
+		<select name="SibSp">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			</select>
+		</div>
+		</td>
+	  </tr>
+    
+	  <tr>
+			<td><label>Members in family:</label></td>
+			<td>
+			<div class="input-container">
+			<select name="Parch">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				</select>
+			</div>
+			</td>
+		  </tr>
+
+		  <tr>
+				<td><label>Embarked station:</label></td>
+				<td>
+				<div class="input-container">
+				<select name="Embarked">
+					<option value="Q">Q</option>
+					<option value="S">S</option>
+					<option value="C">C</option>
+					</select>
+				</div>
+				</td>
+			  </tr>
+
+			  <tr>
+					<td><label>Cabin:</label></td>
+					<td>
+					<div class="input-container">
+					<select name="Cabin">
+					    <option value="A">A</option>
+						<option value="B">B</option>
+						<option value="C">C</option>
+						<option value="D">D</option>
+						<option value="E">E</option>
+						</select>
+					</div>
+					</td>
+				  </tr>
+  <td>&nbsp;</td>
+  <td><input type="submit" class="greenButton" value="Submit" >
+</td>
+  </tr>
+  
+  
+  </tbody>
+</table>
+
+</form>
+
+<div id="error">
+&nbsp;
 </div>
+
+</div>
+
 </body>
 </html>
