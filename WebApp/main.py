@@ -62,7 +62,10 @@ app=Flask(__name__)
 def index():
     return flask.render_template('index.html')
 def addfeatures(data):
-    data['Title']=data.Name.str.extract('((?:Mr\.|Mrs\.|Miss\.|Ms\.))')[0].str.lower()
+    if data.Name.str.contains('((?:Mr\.|Mrs\.|Miss\.|Ms\.))').any():
+        data['Title']=data.Name.str.extract('((?:Mr\.|Mrs\.|Miss\.|Ms\.))')[0].str.lower()
+    else:
+        data['Title']=['mr.']
     data['cabin_class']=data.Cabin.str.extract('(^[a-zA-Z])')[0].str.lower()
     data['ticket_class']=data.Ticket.str.extract('^([\w\-]+)')[0].str.extract('([A-Za-z])')
     data['Title']=data['Title'].fillna(data['Title'].mode()[0])
