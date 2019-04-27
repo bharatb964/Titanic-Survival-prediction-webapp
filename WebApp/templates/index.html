@@ -1,14 +1,24 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Titanic Survival Prediction</title>
-<link rel="stylesheet" href={{ url_for('static', filename='css/demo.css') }} />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/demo.css') }}"/>
 <script type="text/javascript" src="static/script.js"></script>
 </head>
-
 <body>
+	<header>
+		<div class='main'>
+			<ul>
+				<li>
+					<a href="https://www.kaggle.com/c/titanic" target="_blank">Problem</a>
+					<a href="https://github.com/bharatb964/Titanic-Survival-prediction-webapp" target="_blank">Code</a>
+					<a href="https://www.kaggle.com/c/titanic/data" target="_blank">Data</a>
+				</li>
+			</ul>
+		</div>
 <div id="div-regForm">
-<div class="form-title">Titanic Survival Prediction - By Bharat</div>
+<div class="form-title">Titanic Survival Prediction</div>
 <div class="form-sub-title">Fill the following passenger details:</div>
 <form action="/result" method="POST">
 
@@ -122,18 +132,14 @@
   <td><input type="submit" class="greenButton" value="Submit" >
 </td>
   </tr>
-  
-  
   </tbody>
 </table>
-
+	</header>
 </form>
 
 <div id="error">
 &nbsp;
 </div>
-
 </div>
-
 </body>
 </html>

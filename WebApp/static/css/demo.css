@@ -8,14 +8,45 @@ You are free to use the following demo code for any purpose you see fit.
 
 */
 
-
-/* Page styles */
-
-body,h1,h2,h3,p,td,quote,small,form,input,ul,li,ol,label{
-	margin:0px;
-	padding:0px;
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
+header {
+	background-image: url(image5.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+ul {
+	float: right;
+	margin-top: 20px;
+}
+ul li{
+	display: inline-block
+}
+
+ul li a {
+	text-decoration: none;
+	color:white;
+	padding: 5px 20px;
+	border: 1px solid white;
+	transition: 0.6s ease;
+}
+ul li a:hover{
+	background-color: white;
+	color: black;
+}
+/* 
+.main{
+	max-width: 1200px;
+	margin: auto;
+} */
+/* Page styles */
+
+/* 
 body{
 	margin-top:20px;
 	font-family:Arial, Helvetica, sans-serif;
@@ -23,19 +54,16 @@ body{
 	height:100%;
 	
 	font-size:11px;
-}
+} */
 
 
 /* Form styles */
-
 input,select{
-	padding:3px;
-	color:#333333;
-	
+	padding:2px;
+	color:black;
 	border:1px solid #96A6C5;
-	margin-top:2px;
+	margin-top:5px;
 	width:200px;
-	font-size:11px;
 }
 
 select{
@@ -48,41 +76,39 @@ select{
 }
 
 label{
-	font-size:11px;
 	display:block;
 	text-align:right;
+	color: black;
 }
 
 table{
-	width:300px;
-}
-
-td{
-	font-size:11px;
+	width:500px;
 }
 
 .input-container{
 	padding:1px;
 }
-
+ 
 #div-regForm,.registered{	
-	border:3px solid #eeeeee;
-	padding:15px;
-	
-	background:url(img/bg.jpg) repeat-x #cbd4e4;
-	color:#203360;
+	/* border:1px solid #eeeeee; */
+	padding:50px;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+/*	background: #cfdcf067a;*/
+	color:black;
 	
 	margin:30px auto 40px auto;
-	width:400px;
+	width:450px;
 }
 
 .form-title,
 .form-sub-title{
 	font-size:20px;
-	
 	font-family:"Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
-	font-size:20px;
 	font-weight:bold;
+	position: relative;
+	top: 50%;
 }
 
 .form-sub-title{
@@ -120,4 +146,4 @@ td{
 	text-align:center;
 	margin-top:10px;
 	visibility:hidden;
-}
+}  
