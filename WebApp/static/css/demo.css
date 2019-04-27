@@ -88,7 +88,11 @@ table{
 .input-container{
 	padding:1px;
 }
- 
+.title{
+	position: absolute;
+	top: 30%;
+	left: 45%;
+} 
 #div-regForm,.registered{	
 	/* border:1px solid #eeeeee; */
 	padding:50px;
